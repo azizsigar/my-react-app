@@ -1,6 +1,29 @@
 {
-    "questions": "question?",
-    "answers": ["answer 1", "answer 2"],
-    "correctAnswer": "answer 1"
-  }
-  
+  "sorular": [
+    {
+      "id": 1,
+      "soru": "En sevdiğiniz renk nedir?",
+      "secenekler": ["yarak", "Kırmızı"]
+    },
+    {
+      "id": 2,
+      "soru": "En sevdiğiniz meyve nedir?",
+      "secenekler": ["Elma", "Muz"]
+    },
+    {
+      "id": 3,
+      "soru": "Hangi sporu tercih edersiniz?",
+      "secenekler": ["Futbol", "Basketbol"]
+    },
+    {
+      "id": 4,
+      "soru": "Hangi tatlıyı daha çok seversiniz?",
+      "secenekler": ["Çikolata", "Kek"]
+    },
+    {
+      "id": 5,
+      "soru": "En sevdiğiniz seyahat noktası neresi?",
+      "secenekler": ["Paris", "Tokyo"]
+    }
+  ]
+}
