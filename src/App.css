@@ -1,38 +1,73 @@
 .App {
   text-align: center;
+  font-family: 'Teko', sans-serif;
+  font-size: xx-large;
+}
+body{
+letter-spacing:12px;
+
+  background-color: rgb(38, 59, 71);
+}
+h3{
+ letter-spacing: 5px;
+  color: lime;
+}
+button{
+  font-size: xxx-large;
+  border: 1px black solid;
+  border-radius: 15px;
+  box-shadow: 2px 2px black;
+  margin: 10px;
+  background-color: bisque;
+}
+button:hover{
+  box-shadow: 4px 4px black;
+  transition: 1s;
+  background-color: azure;
+  transform: scaleY(1.1)scaleX(1.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+      /* <h1>Kullanıcı Listesi</h1>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+            
+            <strong>{user.name}</strong>
+            <p>Email: {user.email}</p>
+            <p>Şirket: {user.company.name}</p>
+          </li>
+        ))}
+      </ul> */
+    /* 
+      <h1>Kullanıcı Listesi</h1>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+            
+            <strong>{user.name}</strong>
+            <p>Email: {user.email}</p>
+            <p>Şirket: {user.company.name}</p>
+          </li>
+        ))}
+      </ul>
+     */
 
-.App-link {
-  color: #61dafb;
-}
+/*  <div className="question" >
+        <h1> {question}</h1>
+      </div>
+      <div className="options" >
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+        
+<button>🔊</button>
+<button>🔊</button>
+      </div>
+      <div>
+        <h3>correct!</h3>
+      <button>Check it</button>
+      <button>Next </button>
+      </div>
+       */
