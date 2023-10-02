@@ -1,42 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import './App.css';
+import Test from './comps/Test';
+// import Quiz from './Quiz.js';
 
-function SingleProduct() {
-  const [product, setProduct] = useState(null);
-
-  useEffect(() => {
-    getRandomProduct();
-  }, []);
-
-  const getRandomProduct = () => {
-    axios.get('https://azizsigar.github.io/api/api.json')
-      .then((res) => {
-        const randomIndex = Math.floor(Math.random() * res.data.length);
-        const randomProduct = res.data[randomIndex];
-        setProduct(randomProduct);
-      })
-      .catch((error) => {
-        console.error('API error', error);
-      });
-  };
-
+function App() {
   return (
-    <div>
-      <h1>Ürün Detayı</h1>
-      {product ? (
-        <div>
-          <h2>{product.name}</h2>
-          <p>{product.description}</p>
-          <p>Fiyat: {product.price} TL</p>
-        </div>
-      ) : (
-        <p>loading</p>
-      )}
-      <div>
-        <button onClick={getRandomProduct}>Rasgele Ürün Getir</button>
-      </div>
+    <div className="App">
+      <h1>Basit Quiz Uygulaması</h1>
+     <Test/>
+      {/* <Quiz /> */}
     </div>
   );
 }
 
-export default SingleProduct;
+export default App;
