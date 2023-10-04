@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from './quizSorular.js';
 
-function Quiz() {
+function Test() {
   const [soru, setSoru] = useState('');
   const [secenekler, setSecenekler] = useState([]);
   const [dogruYanit, setDogruYanit] = useState('');
@@ -11,25 +11,32 @@ function Quiz() {
 
   const quizSorular = api;
 
+  const shuffleArray = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
+
+  const handleClick = (secenek) => {
+    const text = secenek;
+    const value = new SpeechSynthesisUtterance(text);
+    value.lang = 'nl-NL';
+    window.speechSynthesis.speak(value);
+    console.log(value);
+  };
 
   const baslat = () => {
     if (cevap === dogruYanit) {
       const rastgeleSoruIndex = Math.floor(Math.random() * quizSorular.length);
       const yeniSoru = quizSorular[rastgeleSoruIndex];
-
       setSoru(yeniSoru.soru);
-      setSecenekler(yeniSoru.secenekler);
+      const karisikSecenekler = shuffleArray([...yeniSoru.secenekler]);
+      setSecenekler(karisikSecenekler);
       setDogruYanit(yeniSoru.dogruYanit);
       setCevap('');
       setSonuc('');
       setPuan(puan + 1);
-      
-      
     } else {
       setPuan(0);
-
     }
-
   };
 
   return (
@@ -42,6 +49,7 @@ function Quiz() {
             key={index}
             onClick={() => {
               setCevap(secenek);
+              handleClick(secenek); // Sadece tıklanan butonun içeriğini okur
             }}
             className="bum"
           >
@@ -51,12 +59,9 @@ function Quiz() {
       </div>
       <p>{sonuc}</p>
       <p>Puanınız: {puan}</p>
-      <button onClick={baslat} 
-      
-      
-      >Next</button>
+      <button className='next' onClick={baslat}>Next</button>
     </div>
   );
 }
 
-export default Quiz;
+export default Test;

@@ -5,8 +5,8 @@ const quizSorular = [
     dogruYanit: "beurs",
   },
   {
-    soru: "boek",
-    secenekler: ["broek", "borek"],
+    soru: "broek",
+    secenekler: ["broek", "boek"],
     dogruYanit: "broek",
   },
   {

@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.css';
 import Test from './comps/Test';
+// import Techts from './comps/Techts';
+// import Question from './comps/Techts';
 // import Quiz from './Quiz.js';
 
+
 function App() {
+  
   return (
     <div className="App">
-      <h1>Basit Quiz Uygulaması</h1>
+      {/* <Question/> */}
      <Test/>
+     {/* <Techts/> */}
       {/* <Quiz /> */}
     </div>
   );
