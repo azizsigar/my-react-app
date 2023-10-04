@@ -3,6 +3,16 @@
   font-family: 'Teko', sans-serif;
   font-size: xx-large;
 }
+.info{
+  font-size: x-large;
+  letter-spacing: 5px;
+  text-decoration: none;
+  color: orangered;
+}
+.info a{
+  text-decoration: none;
+  color: azure;
+}
 body{
 letter-spacing:12px;
   background-color: rgb(38, 59, 71);
@@ -43,6 +53,7 @@ button{
   box-shadow: 2px 2px black;
   margin: 10px;
   background-color: bisque;
+  cursor: pointer;
 }
 
 /* button:hover{

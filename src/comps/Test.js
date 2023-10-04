@@ -41,7 +41,7 @@ function Test() {
 
   return (
     <div>
-      <h1>Quiz</h1>
+      <h1>Uitspraak test</h1>
       <h2>{soru}</h2>
       <div>
         {secenekler.map((secenek, index) => (
@@ -53,13 +53,19 @@ function Test() {
             }}
             className="bum"
           >
-            {secenek}
+            🔊
+            {/* {secenek} */}
           </button>
         ))}
       </div>
       <p>{sonuc}</p>
-      <p>Puanınız: {puan}</p>
+      <p>❤️: {puan}</p>
       <button className='next' onClick={baslat}>Next</button>
+      <div className='info'>
+
+      <p>Je speelt momenteel de demoversie van de Uitspraak test.</p>
+      <p>Created by <a href='https://www.linkedin.com/in/abdulaziz-s%C4%B1%C4%9Far-5009611b2/' target='_blank'>Aziz Sigar</a></p>
+      </div>
     </div>
   );
 }
